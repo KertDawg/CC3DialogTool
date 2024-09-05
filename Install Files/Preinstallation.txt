@@ -1,0 +1,1 @@
+This is an add-on that resizes dialog boxes in Campaign Cartographer.  You must own Campaign Cartographer 3+ to use this add-on.

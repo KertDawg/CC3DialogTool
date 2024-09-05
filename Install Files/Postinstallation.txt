@@ -1,0 +1,6 @@
+To resize a dialog:
+
+1. Start CC3+.
+2. Type: "DIALOGTOOL" and hit Enter.
+3. Type the dialog size that you want.  The default is 8.
+4. Hit OK.
