@@ -4,6 +4,7 @@
 #include <XT_Entities.h>
 #include "XP.H"
 
+#define NUMBEROFDIALOGS 1
 
 struct DialogDetail
 {
@@ -14,6 +15,7 @@ struct DialogDetail
 
 extern DialogDetail DialogList[];
 extern int SelectedDialogIndex;
+extern unsigned int SelectedSize;
 
 
 void LoopThroughDialogs();

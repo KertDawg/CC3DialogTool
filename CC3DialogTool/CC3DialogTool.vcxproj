@@ -107,6 +107,10 @@
   <ItemGroup>
     <ClInclude Include="DialogManager.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CC3DialogTool.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

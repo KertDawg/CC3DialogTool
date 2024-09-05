@@ -4,6 +4,7 @@
 #include "stdio.h"
 #include <vector>
 #include <string>
+#include <tchar.h>
 #include <windows.h>
 #include <winuser.h>
 #include <algorithm>
@@ -11,7 +12,7 @@
 
 #include "Main.h"
 #include "DialogManager.h"
-
+#include "resource.h"
 
 
 char CList[] = "DIALOGTOOL\0\0";
@@ -53,11 +54,21 @@ void XPCALL About()
 
 void XPCALL SetupDialog()
 {
-	LoopThroughDialogs();
-	EndDialog();
+	int DialogHandle = DefDlg("IDD_DLGOPTIONS", 0, 0, NULL, NULL, NULL);
+	//EDCTL(DialogHandle, IDC_SELECT, 0, FT_UDec4, 6, &SelectedDialogIndex, NULL);
+	EDCTL(DialogHandle, IDC_EDTSIZE, 0, FT_UDec4, 6, &SelectedSize, NULL);
+	int DialogResult = XPDlog(DialogHandle, MyXP.ModHdl, 0);
+	RelDlg(DialogHandle);
+
+	if (DialogResult == IDOK)
+	{
+		LoopThroughDialogs();
+		EndDialog();
+	}
 
 	CmdEnd();
 }
+
 
 void XPCALL EndDialog()
 {

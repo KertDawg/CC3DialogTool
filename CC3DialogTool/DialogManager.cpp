@@ -1,7 +1,7 @@
 #include "DialogManager.h"
 
 
-DialogDetail DialogList[1] = {
+DialogDetail DialogList[NUMBEROFDIALOGS] = {
 	{
 		"Custom Drawing Tools",
 		"IDD_DLGDRAWTOOLBASICSAMPLE",
@@ -10,6 +10,7 @@ DialogDetail DialogList[1] = {
 };
 
 int SelectedDialogIndex = 0;
+unsigned int SelectedSize = 8;
 
 
 void LoopThroughDialogs()
