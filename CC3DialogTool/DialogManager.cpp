@@ -35,7 +35,7 @@ BOOL ProcessOneDialog(HMODULE hModule, LPCTSTR lpType, LPTSTR lpName, LONG lPara
 
 		VirtualProtect(ResourceMemory, 100, PAGE_READWRITE, &OldProtect);
 		FontSizePointer = ((unsigned char*)ResourceMemory) + DialogList[SelectedDialogIndex].SizeOffset;
-		*FontSizePointer = 16;
+		*FontSizePointer = SelectedSize;
 		FreeResource(LoadedResource);
 	}
 
