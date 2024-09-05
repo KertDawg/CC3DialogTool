@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <XT_Entities.h>
 #include "XP.H"
+#include "DialogManager.h"
 
 #define XPID 0x2457
 
@@ -12,7 +13,6 @@ extern PCMDPROC PList[];
 extern XP MyXP;
 void XPCALL SetupDialog();
 void XPCALL GetHandle();
-void XPCALL SearchMemory();
 bool XPCALL IsBufferAllZeroes(std::vector<char> Buffer);
 bool XPCALL FindWord(std::vector<char> Haystack, unsigned int Needle, unsigned int *DLGIDIndex);
 void XPCALL PatchMemory();
